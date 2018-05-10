@@ -171,28 +171,28 @@ public class MyArray {
     public static void main(String[] args){
         //构造
         MyArray myArray = new MyArray();
-        System.out.println(myArray);
+        System.out.println("原始值：    " + myArray);
         //取值
-        System.out.println(myArray.get(2));
+        System.out.println("获取第3个元素：" + myArray.get(2));
         //添加值
         myArray.add(5);
-        System.out.println(myArray);
+        System.out.println("添加一个5：    " + myArray);
         myArray.add(2);
-        System.out.println(myArray);
+        System.out.println("添加一个2：    " + myArray);
         myArray.add(7);
-        System.out.println(myArray);
+        System.out.println("添加一个7：    " + myArray);
         myArray.add(8);
-        System.out.println(myArray);
+        System.out.println("添加一个8：    " + myArray);
         //索引查询
-        System.out.println(myArray.get(2));
+        System.out.println("获取第3个元素：" + myArray.get(2));
         //元素值查询
-        System.out.println(myArray.find(4));
-        System.out.println(myArray.find(5));
+        System.out.println("查找4所在索引：" + myArray.find(4));
+        System.out.println("查找5所在索引：" + myArray.find(5));
         //修改
         myArray.modify(7,17);
-        System.out.println(myArray);
+        System.out.println("将7修改为17：    " + myArray);
         //删除
         myArray.delete(2);
-        System.out.println(myArray);
+        System.out.println("删除2：    " + myArray);
     }
 }
