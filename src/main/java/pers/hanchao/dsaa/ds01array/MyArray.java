@@ -59,8 +59,8 @@ public class MyArray {
      */
     public void printAll(){
         System.out.print("[");
-        for (int element : this.elements) {
-          System.out.print(element + ",");
+        for (int i = 0; i < this.length; i++) {
+            System.out.print(this.elements[i] + ",");
         }
         System.out.println("]");
     }
@@ -194,5 +194,10 @@ public class MyArray {
         //删除
         myArray.delete(2);
         System.out.println("删除2：    " + myArray);
+        //打印所有
+        System.out.print("打印所有元素：");
+        myArray.printAll();
+        //打印容量和用量
+        System.out.println("数组用量/容量：" + myArray.getLength() + "/" + myArray.getCapacity());
     }
 }
