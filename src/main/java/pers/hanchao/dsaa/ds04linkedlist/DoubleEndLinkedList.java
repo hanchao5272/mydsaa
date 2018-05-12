@@ -84,10 +84,10 @@ public class DoubleEndLinkedList {
      * 头部删除
      * @return 被删除的节点数据
      */
-    public boolean removeHead(){
-        if (isEmpty()){
-            return  false;
-        }else {
+    public Object removeHead(){
+        Node node = null;
+        if (!isEmpty()){
+            node = head;
             if (size == 1){
                 head = null;
                 //注意将尾节点置为null
@@ -97,7 +97,7 @@ public class DoubleEndLinkedList {
             }
             size --;
         }
-        return true;
+        return node.getObj();
     }
 
     /**
