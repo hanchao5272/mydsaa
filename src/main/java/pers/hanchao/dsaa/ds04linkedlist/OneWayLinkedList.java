@@ -5,7 +5,7 @@ package pers.hanchao.dsaa.ds04linkedlist;
  *
  * @author hanchao 2018/5/12 18:08
  **/
-public class SingleLinkedList {
+public class OneWayLinkedList {
     /**
      * 头节点
      **/
@@ -15,7 +15,7 @@ public class SingleLinkedList {
      **/
     private int size;
 
-    public SingleLinkedList() {
+    public OneWayLinkedList() {
         head = null;
         size = 0;
     }
@@ -145,7 +145,7 @@ public class SingleLinkedList {
      * 打印所有节点
      */
     public void display() {
-        System.out.print("SingleLinkedList[");
+        System.out.print("OneWayLinkedList[");
         //如果为空，则直接打印null
         if (isEmpty()) {
             System.out.println("]");
@@ -212,21 +212,21 @@ public class SingleLinkedList {
      **/
     public static void main(String[] args) {
         //定义一个链表
-        SingleLinkedList singleLinkedList = new SingleLinkedList();
-        singleLinkedList.display();
+        OneWayLinkedList oneWayLinkedList = new OneWayLinkedList();
+        oneWayLinkedList.display();
         //插入节点
-        singleLinkedList.addHead("Hello World!");
-        singleLinkedList.display();
-        singleLinkedList.addHead(1324);
-        singleLinkedList.display();
-        singleLinkedList.addHead(3.1415D);
-        singleLinkedList.display();
-        singleLinkedList.addHead(true);
-        singleLinkedList.display();
+        oneWayLinkedList.addHead("Hello World!");
+        oneWayLinkedList.display();
+        oneWayLinkedList.addHead(1324);
+        oneWayLinkedList.display();
+        oneWayLinkedList.addHead(3.1415D);
+        oneWayLinkedList.display();
+        oneWayLinkedList.addHead(true);
+        oneWayLinkedList.display();
         //移除节点
-        singleLinkedList.remove(1324);
-        singleLinkedList.display();
-        singleLinkedList.removeHead();
-        singleLinkedList.display();
+        oneWayLinkedList.remove(1324);
+        oneWayLinkedList.display();
+        oneWayLinkedList.removeHead();
+        oneWayLinkedList.display();
     }
 }
