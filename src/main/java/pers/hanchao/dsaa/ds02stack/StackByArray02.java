@@ -37,11 +37,11 @@ public class StackByArray02 {
      */
     public void push(Object obj){
         //如果当前栈满，则扩容
-        if (top >= capacity - 1){
+        if (top == capacity - 1){
             expand();
         }
-        //进栈
-        this.elements[++ top] = obj;
+        //栈顶上浮，数据进栈
+        this.elements[ ++ top] = obj;
     }
 
     /**
@@ -103,8 +103,14 @@ public class StackByArray02 {
 
     @Override
     public String toString() {
+        Object[] validElements = null;
+        if (-1 != top){
+            validElements = Arrays.copyOf(this.elements,top + 1);
+        }else {
+            validElements = new Object[0];
+        }
         return "StackByArray02{" +
-                "elements=" + Arrays.toString(elements) +
+                "elements=" + Arrays.toString(validElements) +
                 ", capacity=" + capacity +
                 ", top=" + top +
                 '}';
@@ -133,7 +139,7 @@ public class StackByArray02 {
         System.out.println("当前栈：" + stack);
         stack.push('\u0066');
         System.out.print("当前栈：" + stack);
-        System.out.print(",是否空栈：" + stack.isEmpty());
+        System.out.println(",是否空栈：" + stack.isEmpty());
 
         //连续出栈
         stack.pop();
