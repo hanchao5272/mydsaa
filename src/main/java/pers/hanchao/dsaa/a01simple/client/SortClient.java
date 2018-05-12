@@ -2,6 +2,7 @@ package pers.hanchao.dsaa.a01simple.client;
 
 import pers.hanchao.dsaa.a01simple.behavior.Sorter;
 import pers.hanchao.dsaa.a01simple.behavior.impl.BubbleSorter;
+import pers.hanchao.dsaa.a01simple.behavior.impl.InsertSorter;
 import pers.hanchao.dsaa.a01simple.behavior.impl.SelectSorter;
 
 /**
@@ -60,11 +61,16 @@ public class SortClient {
         System.out.println("冒泡排序测试：");
         sortClient.doSort();
 
-        //更换排序器
+        //更换排序器为选择排序器
         sortClient.setSorter(new SelectSorter());
         //进行选择排序
         System.out.println("选择排序测试：");
         sortClient.doSort();
 
+        //更换排序器为插入排序器
+        sortClient.setSorter(new InsertSorter());
+        //进行插入排序
+        System.out.println("选择插入测试：");
+        sortClient.doSort();
     }
 }
