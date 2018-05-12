@@ -1,18 +1,21 @@
-package pers.hanchao.dsaa.a01simple;
+package pers.hanchao.dsaa.a01simple.behavior.impl;
+
+import pers.hanchao.dsaa.a01simple.behavior.Sorter;
 
 /**
  * <p>冒泡排序</p>
  *
  * @author hanchao 2018/5/10 22:28
  **/
-public class BubbleSort {
+public class BubbleSorter extends Sorter {
     /**
      * 冒泡排序
      *
      * @param array 待排序数组
      * @return 排序完成的有序数组
      */
-    public static int[] sort(int[] array) {
+    @Override
+    public int[] sort(int[] array) {
         //最外层循环表示需要进行多少轮排序
         //注意一共进行了n-1次循环，而不是n次
         for (int i = 1; i < array.length; i++) {
@@ -33,60 +36,14 @@ public class BubbleSort {
                 }
             }
             //打印当前数组
-            System.out.print("第" + i + "交换结果：");
+            System.out.print("第" + i + "冒泡结果：");
             display(array);
             //如果没进行交换，则表示已经排序结束
             if (!swap) {
-                System.out.println("交换完成");
+                System.out.println("冒泡完成");
                 break;
             }
         }
         return array;
-    }
-
-    /**
-     * 打印数组
-     *
-     * @param array
-     */
-    private static void display(int[] array) {
-        System.out.print("array{ ");
-        for (int element : array) {
-            System.out.print(element + " ");
-        }
-        System.out.println("}");
-    }
-
-    /**
-     * <p>测试冒泡排序</p>
-     *
-     * @author hanchao 2018/5/10 22:41
-     **/
-    public static void main(String[] args) {
-        //定义并初始化数组
-        int[] array = {8,6,1,3,9,7,4,6,5,0};
-        //打印初始数组
-        System.out.print("初始数组：");
-        display(array);
-        //进行冒泡排序
-        sort(array);
-
-        System.out.println();
-        //定义并初始化数组
-        int[] array1 = {9,8,7,6,5,4,3,2,1,0};
-        //打印初始数组
-        System.out.print("初始数组：");
-        display(array1);
-        //进行冒泡排序
-        sort(array1);
-
-        System.out.println();
-        //定义并初始化数组
-        int[] array2 = {9,8,7,6,5,0,1,2,3,4};
-        //打印初始数组
-        System.out.print("初始数组：");
-        display(array2);
-        //进行冒泡排序
-        sort(array2);
     }
 }
