@@ -1,4 +1,4 @@
-package pers.hanchao.dsaa.ds06hash.array;
+package pers.hanchao.dsaa.ds06hash.table;
 
 /**
  * 哈希节点

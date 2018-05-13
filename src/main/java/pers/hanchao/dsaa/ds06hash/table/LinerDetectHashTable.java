@@ -1,4 +1,4 @@
-package pers.hanchao.dsaa.ds06hash.array;
+package pers.hanchao.dsaa.ds06hash.table;
 
 /**
  * 通过线性探索解决哈希冲突的哈希表实现方式
